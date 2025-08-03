@@ -86,5 +86,6 @@ public class ParameterizedTests extends TestBase{
         $("input[placeholder=\"Поиск по Лабиринту\"]").setValue(toyTitle+publishing).pressEnter();
         $x(String.format("//a[contains(text(), '%s')]", toyTitle)).click();
         $("._label_ssd04_48").shouldHave(text("Добавить в корзину")).click();
-        $("button._btn_htzb6_1._minus_htzb6_26").shouldBe(visible);
+        sleep(900);
+        $("button[class*='minus']").shouldBe(visible);
     }}
