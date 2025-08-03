@@ -59,7 +59,7 @@ public class ParameterizedTests extends TestBase{
         // Проверяем количество элементов
         if (result) {
             $$("li.gutter-genre-list")
-                    .shouldHave(sizeGreaterThan(expectedFilter)); // Проверяем точное количество
+                    .shouldHave(sizeGreaterThan(expectedFilter)); // Проверяем, что больше, чем ожидаемое количество
         }
         else {
             $$("li.gutter-genre-list")
@@ -73,7 +73,7 @@ public class ParameterizedTests extends TestBase{
         return Stream.of(
                 Arguments.of("Рисование", 4, true),    // Ожидаем больше 5 элементов
                 Arguments.of("Сумки", 0, false),     // Элементов не найдено
-                Arguments.of("Офисная канцелярия", 1, true) // Ожидаем ровно 2 элемента
+                Arguments.of("Офисная канцелярия", 1, true) // Ожидаем больше 1 элемента
         );
     }
 
